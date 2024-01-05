@@ -1,6 +1,3 @@
-echo "Copying dotfiles..."
-./copy.sh
-
 which fzf 2> /dev/null
 if test $? -gt 0; then
 	echo "-----------------------"

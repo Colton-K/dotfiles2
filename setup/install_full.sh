@@ -6,10 +6,7 @@ fi
 
 echo "Package manager command: $package_manager"
 
-packages="git htop"
-echo "Package manager command: $package_manager"
-
-packages="git htop pip ripgrep nodejs gcc firefox z"
+packages="git htop pip tmux ripgrep nodejs gcc"
 
 ${package_manager} ${packages}
 
