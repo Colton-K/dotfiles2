@@ -1,0 +1,48 @@
+[user]
+	email = ckammes@amazon.com
+	name = Colton Kammes
+
+[diff]
+  tool = nvimdiff
+
+[difftool "nvimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE
+
+[difftool]
+  prompt = false
+
+[alias]
+        pr = pull --rebase
+        prrs = pull --rebase --recurse-submodules
+        di = diff
+        st = status -s
+        co = checkout
+        fpa = fetch --prune --all
+        logs = log --topo-order --decorate --stat
+        graph = log --graph --decorate --abbrev-commit --pretty=oneline
+        grapha = log --graph --decorate --abbrev-commit --pretty=oneline --all
+        dw = diff --word-diff
+        cloner = clone --recursive
+        ca = !git add -A && git commit -av
+
+[commit]
+    template = ~/commitTemplate
+
+[apply]
+    whitespace = fix
+[pull]
+	rebase = false
+[credential]
+	helper = cache
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
+[amazon]
+    append-cr-url = true
+    pull-request-by-default = true
+
+[core]
+	editor = nvim

@@ -1,0 +1,6 @@
+vim/plugged/*
+vim/undodir/*
+docker/.env
+docker/test/*
+config/coc/*
+bin/config.json
